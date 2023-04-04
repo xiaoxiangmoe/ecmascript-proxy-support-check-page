@@ -1,0 +1,1 @@
+# ecmascript-proxy-support-check-page
