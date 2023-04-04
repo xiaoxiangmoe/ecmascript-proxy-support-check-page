@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ecmascript-proxy-support-check-page</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        var root = document.getElementById('root');
+        function checkSupportEcmaScriptProxy() {
+            var supportProxy;
+            try {
+                new Proxy({}, {}); supportProxy = true;
+                } catch (e) {
+                    supportProxy = false;
+                }
+            return supportProxy;
+        }
+        root.innerHTML = checkSupportEcmaScriptProxy() ? 'Great! Your browser supports EcmaScript Proxy' : 'QAQ. Your browser does not support EcmaScript Proxy.';
+    </script>
+</body>
+</html>
